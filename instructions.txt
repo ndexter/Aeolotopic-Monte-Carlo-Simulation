@@ -1,0 +1,24 @@
+The main program is monte_carlo.c, it is written to be compiled with the GNU C++ Compiler, g++. Before compiling, ensure that you have installed the GNU Scientific Library and that it is in your build path. Note: monte_carlo.c is written in C, but uses a C++ library and needs to be compiled with g++.
+
+To compile the code:
+g++ monte_carlo.c -fopenmp -lgsl -lgslcblas -arch i386
+
+To compile with debugging enabled:
+g++ monte_carlo.c -fopenmp -lgsl -lgslcblas -arch i386 -ggdb
+
+To run the code in the terminal on OSX or Linux:
+./a.out
+
+To run the code in cygwin on Windows:
+./a.exe
+
+To run the code in debugging mode, after compiling with debugging enabled on Linux or OSX use:
+gdb a.out 
+
+To run the code in debugging mode, after compiling with debugging enabled on Windows:
+gdb a.exe
+
+The plot.plt file is a gnuplot script for automatically generating plots in the postscript file format. To use the script, you must have gnuplot installed.
+
+To use the script, type the following in the terminal on Windows, Linux, or OSX:
+gnuplot < plot.plt
